@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Certificate</h1>
+        <p>List of my certifications.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>My Certificate</h2>
+        <ul>
+            <li><strong>Certification:</strong> AWS Certified Solutions Architect</li>
+            <li><strong>Issued by:</strong> Amazon Web Services</li>
+            <li><strong>Year:</strong> 2023</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

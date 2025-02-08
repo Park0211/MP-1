@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+}
+
+nav {
+    background-color: #d0d0d0; /* 네비게이션 배경 색 */
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 10px 10px;
+}
+
+main {
+    background-color: #e0e0e0; /* 메인 배경 색 */
+    height: 100vh; /* 전체 화면 높이 */
+}
+
+footer {
+    background-color: #f0f0f0; /* 푸터 배경 색 */
+    text-align: center;
+    padding: 10px;
+}
+
+/* 미디어 쿼리 */
+@media screen and (min-width: 750px) {
+    nav {
+        display: flex;
+        flex-direction: column; /* 수직 정렬 */
+        width: 10%; /* 원하는 너비로 조정 */
+        height: 100vh;
+        float: left; /* 왼쪽에 배치 */
+    }
+    main{
+        float: right;
+        width: 90%;
+        padding: 20px;
+    }
+    footer{
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    nav {
+        display: flex;
+        flex-direction: row; /* 수평 정렬 */
+        width: 100%; /* 전체 너비 사용 */
+        justify-content: space-around; /* 요소 간격 조정 */
+        margin: 0;
+    }
+    nav li{
+        display: inline-block;
+    }
+    main {
+        margin: 0; /* 여백 제거 */
+        padding: 20px;
+    }
+}
