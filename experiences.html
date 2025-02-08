@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiences</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <h1>Experiences</h1>
-        <p>Details about my work experience.</p>
+        <p>Professional and Academic Experiences</p>
     </header>
 
     <nav>
@@ -18,28 +18,86 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="experiences.html">Experiences</a></li>
-            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="extracurricularActivities.html">Extracurricular Activities </a></li>
             <li><a href="certifications.html">Certifications</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>My Experiences</h2>
-        <ul>
-            <li><strong>Company Name:</strong> Google</li>
-            <li><strong>Position:</strong> Software Engineer Intern</li>
-            <li><strong>Duration:</strong> Summer 2024</li>
-        </ul>
+        <section class="experiences-section">
+            <h2>Work Experience</h2>
+            <table class="experience-table">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Summer 2023</td>
+                        <td>Tech Company</td>
+                        <td>Software Engineering Intern</td>
+                        <td>Boston, MA</td>
+                        <td>
+                            <ul>
+                                <li>Developed and maintained web applications</li>
+                                <li>Collaborated with senior developers on project implementation</li>
+                                <li>Participated in code reviews and team meetings</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022 - 2023</td>
+                        <td>University Lab</td>
+                        <td>Research Assistant</td>
+                        <td>Boston, MA</td>
+                        <td>
+                            <ul>
+                                <li>Assisted in data analysis and visualization</li>
+                                <li>Implemented machine learning algorithms</li>
+                                <li>Contributed to research publications</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Academic Projects</h2>
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Project</th>
+                        <th>Technologies</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023</td>
+                        <td>Portfolio Website</td>
+                        <td>HTML, CSS, JavaScript</td>
+                        <td>Designed and developed a personal portfolio website</td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Database System</td>
+                        <td>SQL, Python</td>
+                        <td>Created a database management system for a local business</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
+        <p>&copy; 2025 Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
 
 </body>
 </html>

@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <h1>Education</h1>
-        <p>Details about my academic background.</p>
+        <p>Details about my academic background</p>
     </header>
 
     <nav>
@@ -18,28 +18,79 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="experiences.html">Experiences</a></li>
-            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="extracurricularActivities.html">Extracurricular Activities </a></li>
             <li><a href="certifications.html">Certifications</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>My Academic Background</h2>
-        <ul>
-            <li><strong>University Name</strong>: Boston University</li>
-            <li><strong>Degree</strong>: Bachelor of Science in Computer Science</li>
-            <li><strong>Graduation Year</strong>: 2025</li>
-        </ul>
+        <section class="education-section">
+            <h2>Academic History</h2>
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th>Period</th>
+                        <th>Institution</th>
+                        <th>Degree</th>
+                        <th>Major</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2021 - Present</td>
+                        <td>Boston University</td>
+                        <td>Bachelor of Science</td>
+                        <td>Computer Science</td>
+                        <td>In Progress</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Key Courses</h2>
+            <table class="courses-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Courses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Programming</td>
+                        <td>
+                            <ul>
+                                <li>Data Structures and Algorithms</li>
+                                <li>Object-Oriented Programming</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Systems</td>
+                        <td>
+                            <ul>
+                                <li>Operating Systems</li>
+                                <li>Computer Networks</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Applications</td>
+                        <td>
+                            <ul>
+                                <li>Database Systems</li>
+                                <li>Web Programming</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
+        <p>&copy; 2025 Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
 </body>
 </html>

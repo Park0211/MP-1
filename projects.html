@@ -5,12 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .calculator button {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            font-size: 18px;
+        }
+        .negative {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-
     <header>
-        <h1>projects</h1>
-        <p>My software development projects.</p>
+        <h1>Projects</h1>
+        <p>My Software Development Projects</p>
     </header>
 
     <nav>
@@ -18,7 +40,7 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="experiences.html">Experiences</a></li>
-            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="extracurricularActivities.html">Extracurricular Activities </a></li>
             <li><a href="certifications.html">Certifications</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
@@ -26,20 +48,92 @@
 
     <main>
         <h2>My Projects</h2>
-        <ul>
-            <li><strong>Project:</strong> Personal Website</li>
-            <li><strong>Description:</strong> Built a portfolio website using HTML, CSS, and JavaScript.</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/yourusername/project" target="_blank">View on GitHub</a></li>
-        </ul>
+        <section class="projects-list">
+            <ul>
+                <li><strong>Project:</strong> Personal Website</li>
+                <li><strong>Description:</strong> Built a portfolio website using HTML, CSS, and JavaScript</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername/project" target="_blank">View on GitHub</a></li>
+            </ul>
+        </section>
+
+        <section class="calculator-section">
+            <h2>JavaScript Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator">
+                    <div class="calculator-display">
+                        <input type="number" id="first-number" placeholder="First Number" class="calc-input">
+                        <input type="number" id="second-number" placeholder="Second Number" class="calc-input">
+                    </div>
+                    <div class="calculator-result">
+                        <h3 id="output" class="calc-output"></h3>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button onclick="addition()" class="calc-btn">+</button>
+                        <button onclick="subtraction()" class="calc-btn">-</button>
+                        <button onclick="multiplication()" class="calc-btn">×</button>
+                        <button onclick="division()" class="calc-btn">÷</button>
+                        <button onclick="powerCalculator()" class="calc-btn">**</button>
+                        <button onclick="clearCalculator()" class="calc-btn clear">C</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
+        <p>2025 Chanho Park. All rights reserved. <a href="credits.html">Credits</a></p>
     </footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+        let output = document.getElementById("output");
+        let first = document.getElementById("first-number");
+        let second = document.getElementById("second-number");
 
+        function addition() {
+            output.innerHTML = String(Number(first.value) + Number(second.value));
+            negativeCheck();
+        }
+
+        function subtraction() {
+            output.innerHTML = String(Number(first.value) - Number(second.value));
+            negativeCheck();
+        }
+
+        function multiplication() {
+            output.innerHTML = String(Number(first.value) * Number(second.value));
+            negativeCheck();
+        }
+
+        function division() {
+            output.innerHTML = String(Number(first.value) / Number(second.value));
+            negativeCheck();
+        }
+
+        function powerCalculator() {
+            let result = 1;
+            let tmp_first = Number(first.value);
+            let tmp_second = Number(second.value);
+            for (let i = 0; i < tmp_second; i++) {
+                result *= tmp_first;
+            }
+            output.innerHTML = String(result);
+            negativeCheck();
+        }
+
+        function clearCalculator() {
+            first.value = null;
+            second.value = null;
+            output.innerHTML = "";
+        }
+
+        function negativeCheck() {
+            const result = Number(output.innerHTML);
+            if (result < 0) {
+                output.classList.add('negative');
+            } else {
+                output.classList.remove('negative');
+            }
+        }
+    </script>
 </body>
 </html>
